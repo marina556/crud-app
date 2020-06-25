@@ -32,10 +32,10 @@ class Item extends Component{
         return(
             
         <li className="row">
-                    <span className="col-8">{this.props.ele.course}</span>
-                    <span className="col-2"><button className="btn addbtn col-11" onClick={()=>{this.handeledit()}}>Edit</button></span>
+                    <span className="col-4 col-md-6">{this.props.ele.course}</span>
+                    <span className="col-4 col-md-3"><button className="btn addbtn col-11" onClick={()=>{this.handeledit()}}>Edit</button></span>
                     {/* <span className="col-2 text-right"><button onClick={()=>this.handeledit()}>edit</button></span> */}
-                    <span className="col-2 text-right"><button className="btn btn-danger col-11" onClick={()=>this.props.delitem(this.props.ele.course)}>delete</button></span>
+                    <span className="col-4 col-md-3 text-right"><button className="btn btn-danger col-11" onClick={()=>this.props.delitem(this.props.ele.course)}>delete</button></span>
         </li>
         )
     }
