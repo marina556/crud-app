@@ -22,17 +22,19 @@ class App extends Component{
     })
   }
 
-  editItem = (val)=>{
-    let {items} = this.state;
-    const index = items.indexOf(i=>i.course===val);
-    items.splice(index,1);
-    this.setState({
-      items
-    })
-  }
-  delitem=(val)=>{
-    let {items} = this.state;
-    const index = items.indexOf(i=>i.course===val);
+  // editItem = (val)=>{
+  //   let {items} = this.state;
+  //   const index = items.indexOf(i=>i.course===val);
+  //   items.splice(index,1);
+  //   this.setState({
+  //     items
+  //   })
+  // }
+  delitem = (val) => {
+    let items = this.state.items;
+    console.log(items);
+    let index = items.findIndex(i=>i.course===val);
+    console.log(index);
     items.splice(index,1);
     this.setState({
       items
